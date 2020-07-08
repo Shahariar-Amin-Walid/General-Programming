@@ -1,0 +1,75 @@
+never_give_up
+In this file,I will write about triangle....
+in my code,
+  a,b,c=three sides of a triangle
+  A=area of the triangle
+  s=half boundary length
+  r=radius of incenter
+  R=radius of circumcenter
+  m,n,o=3 medians of the triangle
+  ha,hb,hc=3 heights of the triangle
+  
+        |------|
+        | CODE |
+        |------|
+  
+#include<bits/stdc++.h>
+#define dd double
+#define ll long long
+#define ld long double
+#define s1(a) scanf("%d",&a)
+#define s2(a,b) scanf("%d",&a,&b)
+#define esp 1e-7
+#define M (1e9)+7
+#define pf printf
+using namespace std;
+int main( )
+{
+	dd a,b,c,r,s,A,m,n,o,R,ha,hb,hc;
+	cout<<"Enter the value of three sides of a triangle....."<<endl;
+	cin>>a>>b>>c;
+	s=(a+b+c)/2;
+	// boundary of the triangle
+	cout<<"The boundary of the triangle : "<<2*s<<endl<<endl;
+	//Area of the triangle
+	
+	A=sqrt(s*(s-a)*(s-b)*(s-c));
+	cout<<"Area of the triangle is; "<<A<<endl<<endl;
+	//radius of incenter
+	
+	r=(A/s);
+	cout<<"Radius of incenter :"<<r<<endl<<endl;
+	
+	
+	
+	//radius of circumcenter
+	R=(a*b*c)/(4.0*A);
+	cout<<"Radius of Circumcenter :"<<R<<endl<<endl;
+	
+	
+	
+	//find the medians of a triangle
+	// median of side thats length is a
+	m=sqrt((2*b*b)+(2*c*c)-(a*a))/2;
+	cout<<"side length : "<<a<<'\t'<<"median length : "<<m<<endl;
+	//medium of side that length is b
+	n=sqrt((2*a*a)+(2*c*c)-(b*b))/2;
+	cout<<"side length : "<<b<<'\t'<<"median length : "<<n<<endl;
+	//medium of side that length is c
+	o=sqrt((2*a*a)+(2*b*b)-(c*c))/2;
+	cout<<"side length : "<<c<<'\t'<<"median length : "<<o<<endl<<endl;
+	
+	
+	//find out the heights of a triangle:
+	//ha=the length of vertex A to BC side of the triangle:
+	ha=(2*A)/a;
+	cout<<"The height of vertex A to BC : "<<ha<<endl;
+	
+	//hb=the length of vertex B to AC side of the triangle:
+	hb=(2*A)/b;
+	cout<<"The height of vertex B to AC : "<<hb<<endl;
+	
+	//hc=the length of vertex C to AB side of the triangle:
+	hc=(2*A)/c;
+	cout<<"The height of vertex C to AB : "<<hc<<endl<<endl;
+}
